@@ -1,0 +1,2951 @@
+{
+  "mappings": [
+    {
+      "id": "5d2d33e4-11ae-4c1f-9717-1698b7c2d8e0",
+      "name": "The marketplace this key belongs to, and its settings - default",
+      "request": {
+        "urlPathTemplate": "/v1/marketplace",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"marketplace\",\n  \"id\": \"mkt_034XtPDs7UJ0TXzTsdaHZa\",\n  \"mode\": \"test\",\n  \"description\": \"description\",\n  \"currency\": \"USD\",\n  \"payments\": true,\n  \"seller_verification\": true,\n  \"hold_funds_until_completion\": true,\n  \"fee\": {\n    \"percent_bps\": 1.1,\n    \"fixed_amount\": 1.1\n  },\n  \"timers\": {\n    \"payment_window_minutes\": 1.1,\n    \"commitment_window_days\": 1.1,\n    \"agreement_window_hours\": 1.1,\n    \"confirmation_window_days\": 1.1,\n    \"review_window_days\": 1.1,\n    \"dispute_window_days\": 1.1\n  },\n  \"reputation\": {\n    \"window_months\": 1.1,\n    \"backout_weight\": 1.1,\n    \"dispute_weight\": 1.1,\n    \"blend\": 1.1,\n    \"prior_rating\": 1.1,\n    \"prior_weight\": 1.1,\n    \"minimum_events\": 1.1\n  },\n  \"disputes\": {\n    \"evidence_days\": 1.1,\n    \"decision_days\": 1.1\n  },\n  \"moderation\": {\n    \"prohibited_keywords\": [\n      \"prohibited_keywords\"\n    ]\n  },\n  \"allowed_origins\": [\n    \"allowed_origins\"\n  ],\n  \"read_only\": {\n    \"reason\": \"payment_failed\",\n    \"since\": \"2024-01-15T09:30:00Z\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5d2d33e4-11ae-4c1f-9717-1698b7c2d8e0",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "6864543d-eb86-4591-8b93-8483239f9407",
+      "name": "List sellers, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"seller\",\n      \"id\": \"sel_034XtPDs7UJ0TXzTsdaHZa\",\n      \"external_id\": \"external_id\",\n      \"display_name\": \"display_name\",\n      \"status\": \"active\",\n      \"suspended_reason\": \"suspended_reason\",\n      \"verification\": {\n        \"status\": \"unverified\",\n        \"verified_at\": null\n      },\n      \"payouts\": {\n        \"status\": \"not_started\",\n        \"requirements_due\": [\n          \"requirements_due\"\n        ],\n        \"stripe_account\": null\n      },\n      \"storefront\": {\n        \"object\": \"storefront\",\n        \"name\": \"name\",\n        \"slug\": \"slug\",\n        \"description\": null,\n        \"metadata\": {\n          \"key\": \"value\"\n        },\n        \"updated_at\": \"2024-01-15T09:30:00Z\"\n      },\n      \"reputation\": {\n        \"completed_orders\": 1.1,\n        \"backed_out\": 1.1,\n        \"disputes_lost\": 1.1,\n        \"review_count\": 1.1,\n        \"average_rating\": null,\n        \"score\": null,\n        \"level\": \"new\"\n      },\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"erased\": true,\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "6864543d-eb86-4591-8b93-8483239f9407",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "95aad5c2-9ef8-4d34-b063-0a7cff306555",
+      "name": "Create a seller - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"seller\",\n  \"id\": \"sel_034XtPDs7UJ0TXzTsdaHZa\",\n  \"external_id\": \"external_id\",\n  \"display_name\": \"display_name\",\n  \"status\": \"active\",\n  \"suspended_reason\": \"suspended_reason\",\n  \"verification\": {\n    \"status\": \"unverified\",\n    \"verified_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"payouts\": {\n    \"status\": \"not_started\",\n    \"requirements_due\": [\n      \"requirements_due\"\n    ],\n    \"stripe_account\": \"stripe_account\"\n  },\n  \"storefront\": {\n    \"object\": \"storefront\",\n    \"name\": \"name\",\n    \"slug\": \"slug\",\n    \"description\": \"description\",\n    \"metadata\": {\n      \"key\": \"value\"\n    },\n    \"updated_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"erased\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "95aad5c2-9ef8-4d34-b063-0a7cff306555",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "2ad338b3-7416-4bcf-aeea-bc855a3980c1",
+      "name": "Retrieve a seller - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"seller\",\n  \"id\": \"sel_034XtPDs7UJ0TXzTsdaHZa\",\n  \"external_id\": \"external_id\",\n  \"display_name\": \"display_name\",\n  \"status\": \"active\",\n  \"suspended_reason\": \"suspended_reason\",\n  \"verification\": {\n    \"status\": \"unverified\",\n    \"verified_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"payouts\": {\n    \"status\": \"not_started\",\n    \"requirements_due\": [\n      \"requirements_due\"\n    ],\n    \"stripe_account\": \"stripe_account\"\n  },\n  \"storefront\": {\n    \"object\": \"storefront\",\n    \"name\": \"name\",\n    \"slug\": \"slug\",\n    \"description\": \"description\",\n    \"metadata\": {\n      \"key\": \"value\"\n    },\n    \"updated_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"erased\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "2ad338b3-7416-4bcf-aeea-bc855a3980c1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1eacd47-8ea6-4734-a9af-b18135053469",
+      "name": "Erase a seller's personal data - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"seller\",\n  \"id\": \"sel_034XtPDs7UJ0TXzTsdaHZa\",\n  \"external_id\": \"external_id\",\n  \"display_name\": \"display_name\",\n  \"status\": \"active\",\n  \"suspended_reason\": \"suspended_reason\",\n  \"verification\": {\n    \"status\": \"unverified\",\n    \"verified_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"payouts\": {\n    \"status\": \"not_started\",\n    \"requirements_due\": [\n      \"requirements_due\"\n    ],\n    \"stripe_account\": \"stripe_account\"\n  },\n  \"storefront\": {\n    \"object\": \"storefront\",\n    \"name\": \"name\",\n    \"slug\": \"slug\",\n    \"description\": \"description\",\n    \"metadata\": {\n      \"key\": \"value\"\n    },\n    \"updated_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"erased\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c1eacd47-8ea6-4734-a9af-b18135053469",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "9f069efd-cd67-46c0-bd47-2c04765b376f",
+      "name": "Update a seller - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"seller\",\n  \"id\": \"sel_034XtPDs7UJ0TXzTsdaHZa\",\n  \"external_id\": \"external_id\",\n  \"display_name\": \"display_name\",\n  \"status\": \"active\",\n  \"suspended_reason\": \"suspended_reason\",\n  \"verification\": {\n    \"status\": \"unverified\",\n    \"verified_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"payouts\": {\n    \"status\": \"not_started\",\n    \"requirements_due\": [\n      \"requirements_due\"\n    ],\n    \"stripe_account\": \"stripe_account\"\n  },\n  \"storefront\": {\n    \"object\": \"storefront\",\n    \"name\": \"name\",\n    \"slug\": \"slug\",\n    \"description\": \"description\",\n    \"metadata\": {\n      \"key\": \"value\"\n    },\n    \"updated_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"erased\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "9f069efd-cd67-46c0-bd47-2c04765b376f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "f3f67671-6788-4e76-9bd8-f76d816f2a62",
+      "name": "Create or replace a seller's storefront - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers/{id}/storefront",
+        "method": "PUT",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"storefront\",\n  \"name\": \"name\",\n  \"slug\": \"slug\",\n  \"description\": \"description\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "f3f67671-6788-4e76-9bd8-f76d816f2a62",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "78cb2926-ede6-4148-b6ca-291d15ab88a5",
+      "name": "Create a Stripe onboarding link for a seller - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers/{id}/onboarding_links",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"onboarding_link\",\n  \"seller\": \"seller\",\n  \"url\": \"url\",\n  \"expires_at\": \"2024-01-15T09:30:00Z\",\n  \"payouts\": {\n    \"status\": \"not_started\",\n    \"requirements_due\": [\n      \"requirements_due\"\n    ],\n    \"stripe_account\": \"stripe_account\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "78cb2926-ede6-4148-b6ca-291d15ab88a5",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "c92f2bb6-6926-4f8b-9a55-58e8e56c2809",
+      "name": "A seller's public profile - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers/{id}/profile",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"seller_profile\",\n  \"id\": \"id\",\n  \"display_name\": \"display_name\",\n  \"verification_status\": \"unverified\",\n  \"storefront\": {\n    \"object\": \"storefront\",\n    \"name\": \"name\",\n    \"slug\": \"slug\",\n    \"description\": \"description\",\n    \"metadata\": {\n      \"key\": \"value\"\n    },\n    \"updated_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c92f2bb6-6926-4f8b-9a55-58e8e56c2809",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "406f468d-a460-4186-ab9e-1926ff13352d",
+      "name": "List buyers, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/buyers",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"buyer\",\n      \"id\": \"buy_034XtPDs7UJ0TXzTsdaHZa\",\n      \"external_id\": \"external_id\",\n      \"display_name\": \"display_name\",\n      \"reputation\": {\n        \"completed_orders\": 1.1,\n        \"backed_out\": 1.1,\n        \"disputes_lost\": 1.1,\n        \"review_count\": 1.1,\n        \"average_rating\": null,\n        \"score\": null,\n        \"level\": \"new\"\n      },\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"erased\": true,\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "406f468d-a460-4186-ab9e-1926ff13352d",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "73c3d6d8-b1d2-49dd-bbe4-4b5326f6df1c",
+      "name": "Create a buyer - default",
+      "request": {
+        "urlPathTemplate": "/v1/buyers",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"buyer\",\n  \"id\": \"buy_034XtPDs7UJ0TXzTsdaHZa\",\n  \"external_id\": \"external_id\",\n  \"display_name\": \"display_name\",\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"erased\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "73c3d6d8-b1d2-49dd-bbe4-4b5326f6df1c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "6cf6e4f2-d0a4-40fd-989e-9ac8ac6f611b",
+      "name": "Retrieve a buyer - default",
+      "request": {
+        "urlPathTemplate": "/v1/buyers/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"buyer\",\n  \"id\": \"buy_034XtPDs7UJ0TXzTsdaHZa\",\n  \"external_id\": \"external_id\",\n  \"display_name\": \"display_name\",\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"erased\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "6cf6e4f2-d0a4-40fd-989e-9ac8ac6f611b",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "dfb5ccbb-9ec8-431c-8324-47930c32d184",
+      "name": "Erase a buyer's personal data - default",
+      "request": {
+        "urlPathTemplate": "/v1/buyers/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"buyer\",\n  \"id\": \"buy_034XtPDs7UJ0TXzTsdaHZa\",\n  \"external_id\": \"external_id\",\n  \"display_name\": \"display_name\",\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"erased\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "dfb5ccbb-9ec8-431c-8324-47930c32d184",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "7fc5bfa2-a75f-4749-80b3-90f482c982fa",
+      "name": "Update a buyer - default",
+      "request": {
+        "urlPathTemplate": "/v1/buyers/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"buyer\",\n  \"id\": \"buy_034XtPDs7UJ0TXzTsdaHZa\",\n  \"external_id\": \"external_id\",\n  \"display_name\": \"display_name\",\n  \"reputation\": {\n    \"completed_orders\": 1.1,\n    \"backed_out\": 1.1,\n    \"disputes_lost\": 1.1,\n    \"review_count\": 1.1,\n    \"average_rating\": 1.1,\n    \"score\": 1.1,\n    \"level\": \"new\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"erased\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "7fc5bfa2-a75f-4749-80b3-90f482c982fa",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3b21ef63-8487-4d08-98de-8571d0514ebe",
+      "name": "List categories - default",
+      "request": {
+        "urlPathTemplate": "/v1/categories",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"category\",\n      \"id\": \"cat_034XtPDs7UJ0TXzTsdaHZa\",\n      \"key\": \"key\",\n      \"name\": \"name\",\n      \"description\": \"description\",\n      \"parent\": \"parent\",\n      \"attribute_schema\": {\n        \"attributes\": [\n          {\n            \"key\": \"format\",\n            \"type\": \"string\"\n          }\n        ]\n      },\n      \"fee\": {},\n      \"prohibited\": true,\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3b21ef63-8487-4d08-98de-8571d0514ebe",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "21a9514d-9c87-4cff-a9a0-92cee4064bb6",
+      "name": "Create a category - default",
+      "request": {
+        "urlPathTemplate": "/v1/categories",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"category\",\n  \"id\": \"cat_034XtPDs7UJ0TXzTsdaHZa\",\n  \"key\": \"key\",\n  \"name\": \"name\",\n  \"description\": \"description\",\n  \"parent\": \"parent\",\n  \"attribute_schema\": {\n    \"attributes\": [\n      {\n        \"key\": \"format\",\n        \"type\": \"string\"\n      }\n    ]\n  },\n  \"fee\": {\n    \"percent_bps\": 1.1,\n    \"fixed_amount\": 1.1\n  },\n  \"prohibited\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "21a9514d-9c87-4cff-a9a0-92cee4064bb6",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "fa166ea6-412f-40fe-ba72-98ee694deed6",
+      "name": "Retrieve a category - default",
+      "request": {
+        "urlPathTemplate": "/v1/categories/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"category\",\n  \"id\": \"cat_034XtPDs7UJ0TXzTsdaHZa\",\n  \"key\": \"key\",\n  \"name\": \"name\",\n  \"description\": \"description\",\n  \"parent\": \"parent\",\n  \"attribute_schema\": {\n    \"attributes\": [\n      {\n        \"key\": \"format\",\n        \"type\": \"string\"\n      }\n    ]\n  },\n  \"fee\": {\n    \"percent_bps\": 1.1,\n    \"fixed_amount\": 1.1\n  },\n  \"prohibited\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "fa166ea6-412f-40fe-ba72-98ee694deed6",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "efa0830a-9965-43a8-9f8f-ddf017b4fb20",
+      "name": "Update a category - default",
+      "request": {
+        "urlPathTemplate": "/v1/categories/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"category\",\n  \"id\": \"cat_034XtPDs7UJ0TXzTsdaHZa\",\n  \"key\": \"key\",\n  \"name\": \"name\",\n  \"description\": \"description\",\n  \"parent\": \"parent\",\n  \"attribute_schema\": {\n    \"attributes\": [\n      {\n        \"key\": \"format\",\n        \"type\": \"string\"\n      }\n    ]\n  },\n  \"fee\": {\n    \"percent_bps\": 1.1,\n    \"fixed_amount\": 1.1\n  },\n  \"prohibited\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "efa0830a-9965-43a8-9f8f-ddf017b4fb20",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "dc5e7f96-9623-4342-9430-5fb3468c535a",
+      "name": "A category's attribute schema - default",
+      "request": {
+        "urlPathTemplate": "/v1/categories/{id}/attribute_schema",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"attributes\": [\n    {\n      \"key\": \"format\",\n      \"label\": \"label\",\n      \"type\": \"string\",\n      \"required\": true,\n      \"options\": [\n        \"options\"\n      ],\n      \"min\": 1.1,\n      \"max\": 1.1,\n      \"max_length\": 1.1\n    }\n  ]\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "dc5e7f96-9623-4342-9430-5fb3468c535a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "15b30212-377c-4acb-8ead-30150ebd5cca",
+      "name": "Replace a category's attribute schema - default",
+      "request": {
+        "urlPathTemplate": "/v1/categories/{id}/attribute_schema",
+        "method": "PUT",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"attributes\": [\n    {\n      \"key\": \"format\",\n      \"label\": \"label\",\n      \"type\": \"string\",\n      \"required\": true,\n      \"options\": [\n        \"options\"\n      ],\n      \"min\": 1.1,\n      \"max\": 1.1,\n      \"max_length\": 1.1\n    }\n  ]\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "15b30212-377c-4acb-8ead-30150ebd5cca",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "823fb589-0987-4997-b45d-ceb88b5a0b05",
+      "name": "List listings, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"listing\",\n      \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n      \"seller\": \"seller\",\n      \"category\": \"category\",\n      \"title\": \"title\",\n      \"description\": \"description\",\n      \"price\": {\n        \"amount\": 4900,\n        \"currency\": \"USD\"\n      },\n      \"quantity\": 1.1,\n      \"quantity_available\": 1.1,\n      \"status\": \"draft\",\n      \"attributes\": {\n        \"key\": \"value\"\n      },\n      \"media\": [\n        {\n          \"object\": \"media\",\n          \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n          \"listing\": \"listing\",\n          \"status\": \"pending\",\n          \"content_type\": \"image/jpeg\",\n          \"size_bytes\": 1.1,\n          \"position\": 1.1,\n          \"url\": null,\n          \"url_expires_at\": null,\n          \"created_at\": \"2024-01-15T09:30:00Z\"\n        }\n      ],\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"published_at\": \"2024-01-15T09:30:00Z\",\n      \"expires_at\": \"2024-01-15T09:30:00Z\",\n      \"removed_reason\": \"removed_reason\",\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "823fb589-0987-4997-b45d-ceb88b5a0b05",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "8a3d2e31-57e1-4926-983a-616a79810e94",
+      "name": "Create a listing, as a draft - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"listing\",\n  \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"category\": \"category\",\n  \"title\": \"title\",\n  \"description\": \"description\",\n  \"price\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"quantity\": 1.1,\n  \"quantity_available\": 1.1,\n  \"status\": \"draft\",\n  \"attributes\": {\n    \"key\": \"value\"\n  },\n  \"media\": [\n    {\n      \"object\": \"media\",\n      \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n      \"listing\": \"listing\",\n      \"status\": \"pending\",\n      \"content_type\": \"image/jpeg\",\n      \"size_bytes\": 1.1,\n      \"position\": 1.1,\n      \"url\": \"url\",\n      \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"published_at\": \"2024-01-15T09:30:00Z\",\n  \"expires_at\": \"2024-01-15T09:30:00Z\",\n  \"removed_reason\": \"removed_reason\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8a3d2e31-57e1-4926-983a-616a79810e94",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3771f493-49a6-40dc-b67a-6f37d1e2aaf1",
+      "name": "Create up to 100 listings at once, all or none - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings/bulk",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"listing\",\n      \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n      \"seller\": \"seller\",\n      \"category\": \"category\",\n      \"title\": \"title\",\n      \"description\": \"description\",\n      \"price\": {\n        \"amount\": 4900,\n        \"currency\": \"USD\"\n      },\n      \"quantity\": 1.1,\n      \"quantity_available\": 1.1,\n      \"status\": \"draft\",\n      \"attributes\": {\n        \"key\": \"value\"\n      },\n      \"media\": [\n        {\n          \"object\": \"media\",\n          \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n          \"listing\": \"listing\",\n          \"status\": \"pending\",\n          \"content_type\": \"image/jpeg\",\n          \"size_bytes\": 1.1,\n          \"position\": 1.1,\n          \"url\": null,\n          \"url_expires_at\": null,\n          \"created_at\": \"2024-01-15T09:30:00Z\"\n        }\n      ],\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"published_at\": \"2024-01-15T09:30:00Z\",\n      \"expires_at\": \"2024-01-15T09:30:00Z\",\n      \"removed_reason\": \"removed_reason\",\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ]\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3771f493-49a6-40dc-b67a-6f37d1e2aaf1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "419368ac-b682-4cba-862a-b76f62dd7efa",
+      "name": "Retrieve a listing - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"listing\",\n  \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"category\": \"category\",\n  \"title\": \"title\",\n  \"description\": \"description\",\n  \"price\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"quantity\": 1.1,\n  \"quantity_available\": 1.1,\n  \"status\": \"draft\",\n  \"attributes\": {\n    \"key\": \"value\"\n  },\n  \"media\": [\n    {\n      \"object\": \"media\",\n      \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n      \"listing\": \"listing\",\n      \"status\": \"pending\",\n      \"content_type\": \"image/jpeg\",\n      \"size_bytes\": 1.1,\n      \"position\": 1.1,\n      \"url\": \"url\",\n      \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"published_at\": \"2024-01-15T09:30:00Z\",\n  \"expires_at\": \"2024-01-15T09:30:00Z\",\n  \"removed_reason\": \"removed_reason\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "419368ac-b682-4cba-862a-b76f62dd7efa",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "a940e7fb-cd77-4f28-9fd1-f98ed229d268",
+      "name": "Update a listing - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"listing\",\n  \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"category\": \"category\",\n  \"title\": \"title\",\n  \"description\": \"description\",\n  \"price\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"quantity\": 1.1,\n  \"quantity_available\": 1.1,\n  \"status\": \"draft\",\n  \"attributes\": {\n    \"key\": \"value\"\n  },\n  \"media\": [\n    {\n      \"object\": \"media\",\n      \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n      \"listing\": \"listing\",\n      \"status\": \"pending\",\n      \"content_type\": \"image/jpeg\",\n      \"size_bytes\": 1.1,\n      \"position\": 1.1,\n      \"url\": \"url\",\n      \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"published_at\": \"2024-01-15T09:30:00Z\",\n  \"expires_at\": \"2024-01-15T09:30:00Z\",\n  \"removed_reason\": \"removed_reason\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "a940e7fb-cd77-4f28-9fd1-f98ed229d268",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "4ee0ae6b-2b40-4a3b-aae8-fa1b5f61951d",
+      "name": "Publish a listing - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings/{id}/publish",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"listing\",\n  \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"category\": \"category\",\n  \"title\": \"title\",\n  \"description\": \"description\",\n  \"price\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"quantity\": 1.1,\n  \"quantity_available\": 1.1,\n  \"status\": \"draft\",\n  \"attributes\": {\n    \"key\": \"value\"\n  },\n  \"media\": [\n    {\n      \"object\": \"media\",\n      \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n      \"listing\": \"listing\",\n      \"status\": \"pending\",\n      \"content_type\": \"image/jpeg\",\n      \"size_bytes\": 1.1,\n      \"position\": 1.1,\n      \"url\": \"url\",\n      \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"published_at\": \"2024-01-15T09:30:00Z\",\n  \"expires_at\": \"2024-01-15T09:30:00Z\",\n  \"removed_reason\": \"removed_reason\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "4ee0ae6b-2b40-4a3b-aae8-fa1b5f61951d",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "6f198908-403c-4b40-b6ae-3e5592ec7e39",
+      "name": "Return a published listing to draft - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings/{id}/unpublish",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"listing\",\n  \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"category\": \"category\",\n  \"title\": \"title\",\n  \"description\": \"description\",\n  \"price\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"quantity\": 1.1,\n  \"quantity_available\": 1.1,\n  \"status\": \"draft\",\n  \"attributes\": {\n    \"key\": \"value\"\n  },\n  \"media\": [\n    {\n      \"object\": \"media\",\n      \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n      \"listing\": \"listing\",\n      \"status\": \"pending\",\n      \"content_type\": \"image/jpeg\",\n      \"size_bytes\": 1.1,\n      \"position\": 1.1,\n      \"url\": \"url\",\n      \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"published_at\": \"2024-01-15T09:30:00Z\",\n  \"expires_at\": \"2024-01-15T09:30:00Z\",\n  \"removed_reason\": \"removed_reason\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "6f198908-403c-4b40-b6ae-3e5592ec7e39",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3986df8b-5b77-4dda-b046-a6c65963883a",
+      "name": "Take a listing down, with a reason - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings/{id}/remove",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"listing\",\n  \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"category\": \"category\",\n  \"title\": \"title\",\n  \"description\": \"description\",\n  \"price\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"quantity\": 1.1,\n  \"quantity_available\": 1.1,\n  \"status\": \"draft\",\n  \"attributes\": {\n    \"key\": \"value\"\n  },\n  \"media\": [\n    {\n      \"object\": \"media\",\n      \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n      \"listing\": \"listing\",\n      \"status\": \"pending\",\n      \"content_type\": \"image/jpeg\",\n      \"size_bytes\": 1.1,\n      \"position\": 1.1,\n      \"url\": \"url\",\n      \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"published_at\": \"2024-01-15T09:30:00Z\",\n  \"expires_at\": \"2024-01-15T09:30:00Z\",\n  \"removed_reason\": \"removed_reason\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3986df8b-5b77-4dda-b046-a6c65963883a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ede7e802-d471-4f1d-ad1f-cfacf1721b28",
+      "name": "A listing's media, pending uploads included - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings/{id}/media",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"media\",\n      \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n      \"listing\": \"listing\",\n      \"status\": \"pending\",\n      \"content_type\": \"image/jpeg\",\n      \"size_bytes\": 1.1,\n      \"position\": 1.1,\n      \"url\": \"url\",\n      \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ede7e802-d471-4f1d-ad1f-cfacf1721b28",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "9033d9a2-3fae-4806-b4a8-2d372510b849",
+      "name": "Start a media upload - default",
+      "request": {
+        "urlPathTemplate": "/v1/listings/{id}/media",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"media\": {\n    \"object\": \"media\",\n    \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n    \"listing\": \"listing\",\n    \"status\": \"pending\",\n    \"content_type\": \"image/jpeg\",\n    \"size_bytes\": 1.1,\n    \"position\": 1.1,\n    \"url\": \"url\",\n    \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n    \"created_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"upload_url\": \"upload_url\",\n  \"upload_expires_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "9033d9a2-3fae-4806-b4a8-2d372510b849",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ad45fe47-1033-4179-a8b0-a0fb94f79d78",
+      "name": "Complete a media upload - default",
+      "request": {
+        "urlPathTemplate": "/v1/media/{id}/complete",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"media\",\n  \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"status\": \"pending\",\n  \"content_type\": \"image/jpeg\",\n  \"size_bytes\": 1.1,\n  \"position\": 1.1,\n  \"url\": \"url\",\n  \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ad45fe47-1033-4179-a8b0-a0fb94f79d78",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "dd73fb2d-7048-43f5-a8a1-a3932fff282a",
+      "name": "Delete media and its file - default",
+      "request": {
+        "urlPathTemplate": "/v1/media/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"media\",\n  \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"status\": \"pending\",\n  \"content_type\": \"image/jpeg\",\n  \"size_bytes\": 1.1,\n  \"position\": 1.1,\n  \"url\": \"url\",\n  \"url_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "dd73fb2d-7048-43f5-a8a1-a3932fff282a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "a90eefd2-b3ac-489f-a4f3-f7e85feafe89",
+      "name": "Search published listings - default",
+      "request": {
+        "urlPathTemplate": "/v1/search/listings",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"listing\",\n      \"id\": \"lst_034XtPDs7UJ0TXzTsdaHZa\",\n      \"seller\": \"seller\",\n      \"category\": \"category\",\n      \"title\": \"title\",\n      \"description\": \"description\",\n      \"price\": {\n        \"amount\": 4900,\n        \"currency\": \"USD\"\n      },\n      \"quantity\": 1.1,\n      \"quantity_available\": 1.1,\n      \"status\": \"draft\",\n      \"attributes\": {\n        \"key\": \"value\"\n      },\n      \"media\": [\n        {\n          \"object\": \"media\",\n          \"id\": \"med_034XtPDs7UJ0TXzTsdaHZa\",\n          \"listing\": \"listing\",\n          \"status\": \"pending\",\n          \"content_type\": \"image/jpeg\",\n          \"size_bytes\": 1.1,\n          \"position\": 1.1,\n          \"url\": null,\n          \"url_expires_at\": null,\n          \"created_at\": \"2024-01-15T09:30:00Z\"\n        }\n      ],\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"published_at\": \"2024-01-15T09:30:00Z\",\n      \"expires_at\": \"2024-01-15T09:30:00Z\",\n      \"removed_reason\": \"removed_reason\",\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "a90eefd2-b3ac-489f-a4f3-f7e85feafe89",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "92dbd389-8bd6-486a-82f2-a3b96927cbea",
+      "name": "List orders, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"order\",\n      \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n      \"listing\": \"listing\",\n      \"buyer\": \"buyer\",\n      \"seller\": \"seller\",\n      \"quantity\": 1.1,\n      \"price\": {\n        \"unit_amount\": 1.1,\n        \"amount\": 1.1,\n        \"currency\": \"USD\"\n      },\n      \"fee\": {\n        \"amount\": 4900,\n        \"currency\": \"USD\"\n      },\n      \"payments\": true,\n      \"payment\": {\n        \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n        \"status\": \"awaiting_payment\",\n        \"checkout_url\": null,\n        \"client_secret\": null,\n        \"amount_refunded\": 1.1,\n        \"amount_released\": 1.1,\n        \"release_status\": null\n      },\n      \"state\": \"awaiting_payment\",\n      \"state_reason\": \"payment_expired\",\n      \"claimed_by\": \"buyer\",\n      \"cancellation_proposal\": {\n        \"proposed_by\": \"buyer\",\n        \"expires_at\": \"2024-01-15T09:30:00Z\"\n      },\n      \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n      \"completed_at\": \"2024-01-15T09:30:00Z\",\n      \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n      \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "92dbd389-8bd6-486a-82f2-a3b96927cbea",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "c8ee9375-f603-485d-9441-c37474c7989f",
+      "name": "Create an order - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"order\",\n  \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"buyer\": \"buyer\",\n  \"seller\": \"seller\",\n  \"quantity\": 1.1,\n  \"price\": {\n    \"unit_amount\": 1.1,\n    \"amount\": 1.1,\n    \"currency\": \"USD\"\n  },\n  \"fee\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"payments\": true,\n  \"payment\": {\n    \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n    \"status\": \"awaiting_payment\",\n    \"checkout_url\": \"checkout_url\",\n    \"client_secret\": \"client_secret\",\n    \"amount_refunded\": 1.1,\n    \"amount_released\": 1.1,\n    \"release_status\": \"held\"\n  },\n  \"state\": \"awaiting_payment\",\n  \"state_reason\": \"payment_expired\",\n  \"claimed_by\": \"buyer\",\n  \"cancellation_proposal\": {\n    \"proposed_by\": \"buyer\",\n    \"expires_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\",\n  \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c8ee9375-f603-485d-9441-c37474c7989f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "94d53be6-43ff-44bd-8941-64cc4b07cc16",
+      "name": "Retrieve an order - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"order\",\n  \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"buyer\": \"buyer\",\n  \"seller\": \"seller\",\n  \"quantity\": 1.1,\n  \"price\": {\n    \"unit_amount\": 1.1,\n    \"amount\": 1.1,\n    \"currency\": \"USD\"\n  },\n  \"fee\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"payments\": true,\n  \"payment\": {\n    \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n    \"status\": \"awaiting_payment\",\n    \"checkout_url\": \"checkout_url\",\n    \"client_secret\": \"client_secret\",\n    \"amount_refunded\": 1.1,\n    \"amount_released\": 1.1,\n    \"release_status\": \"held\"\n  },\n  \"state\": \"awaiting_payment\",\n  \"state_reason\": \"payment_expired\",\n  \"claimed_by\": \"buyer\",\n  \"cancellation_proposal\": {\n    \"proposed_by\": \"buyer\",\n    \"expires_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\",\n  \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "94d53be6-43ff-44bd-8941-64cc4b07cc16",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "29d4bbb0-3084-45e8-99f9-737576d31660",
+      "name": "An order's transitions, oldest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/events",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"order_event\",\n      \"id\": \"oev_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"sequence\": 1.1,\n      \"from_state\": \"from_state\",\n      \"to_state\": \"to_state\",\n      \"actor_type\": \"buyer\",\n      \"actor\": \"actor\",\n      \"reason\": \"reason\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "29d4bbb0-3084-45e8-99f9-737576d31660",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ff81a89a-4b54-46f0-9e87-d555440f5ce7",
+      "name": "Claim the deal is done (committed to claimed) - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/claim",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"order\",\n  \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"buyer\": \"buyer\",\n  \"seller\": \"seller\",\n  \"quantity\": 1.1,\n  \"price\": {\n    \"unit_amount\": 1.1,\n    \"amount\": 1.1,\n    \"currency\": \"USD\"\n  },\n  \"fee\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"payments\": true,\n  \"payment\": {\n    \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n    \"status\": \"awaiting_payment\",\n    \"checkout_url\": \"checkout_url\",\n    \"client_secret\": \"client_secret\",\n    \"amount_refunded\": 1.1,\n    \"amount_released\": 1.1,\n    \"release_status\": \"held\"\n  },\n  \"state\": \"awaiting_payment\",\n  \"state_reason\": \"payment_expired\",\n  \"claimed_by\": \"buyer\",\n  \"cancellation_proposal\": {\n    \"proposed_by\": \"buyer\",\n    \"expires_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\",\n  \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ff81a89a-4b54-46f0-9e87-d555440f5ce7",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "2c81ac45-66c3-418c-81bc-0b86a780394b",
+      "name": "Confirm a claim (claimed to completed), by the party who did not claim - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/confirm",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"order\",\n  \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"buyer\": \"buyer\",\n  \"seller\": \"seller\",\n  \"quantity\": 1.1,\n  \"price\": {\n    \"unit_amount\": 1.1,\n    \"amount\": 1.1,\n    \"currency\": \"USD\"\n  },\n  \"fee\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"payments\": true,\n  \"payment\": {\n    \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n    \"status\": \"awaiting_payment\",\n    \"checkout_url\": \"checkout_url\",\n    \"client_secret\": \"client_secret\",\n    \"amount_refunded\": 1.1,\n    \"amount_released\": 1.1,\n    \"release_status\": \"held\"\n  },\n  \"state\": \"awaiting_payment\",\n  \"state_reason\": \"payment_expired\",\n  \"claimed_by\": \"buyer\",\n  \"cancellation_proposal\": {\n    \"proposed_by\": \"buyer\",\n    \"expires_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\",\n  \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "2c81ac45-66c3-418c-81bc-0b86a780394b",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "1e29d0ae-8db9-4ef5-9695-c2fa4ab5513c",
+      "name": "Back out (committed to cancelled) - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/back_out",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"order\",\n  \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"buyer\": \"buyer\",\n  \"seller\": \"seller\",\n  \"quantity\": 1.1,\n  \"price\": {\n    \"unit_amount\": 1.1,\n    \"amount\": 1.1,\n    \"currency\": \"USD\"\n  },\n  \"fee\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"payments\": true,\n  \"payment\": {\n    \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n    \"status\": \"awaiting_payment\",\n    \"checkout_url\": \"checkout_url\",\n    \"client_secret\": \"client_secret\",\n    \"amount_refunded\": 1.1,\n    \"amount_released\": 1.1,\n    \"release_status\": \"held\"\n  },\n  \"state\": \"awaiting_payment\",\n  \"state_reason\": \"payment_expired\",\n  \"claimed_by\": \"buyer\",\n  \"cancellation_proposal\": {\n    \"proposed_by\": \"buyer\",\n    \"expires_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\",\n  \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "1e29d0ae-8db9-4ef5-9695-c2fa4ab5513c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "94322227-3336-4349-b04e-1a98bf697e19",
+      "name": "Propose cancelling by agreement - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/propose_cancel",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"order\",\n  \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"buyer\": \"buyer\",\n  \"seller\": \"seller\",\n  \"quantity\": 1.1,\n  \"price\": {\n    \"unit_amount\": 1.1,\n    \"amount\": 1.1,\n    \"currency\": \"USD\"\n  },\n  \"fee\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"payments\": true,\n  \"payment\": {\n    \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n    \"status\": \"awaiting_payment\",\n    \"checkout_url\": \"checkout_url\",\n    \"client_secret\": \"client_secret\",\n    \"amount_refunded\": 1.1,\n    \"amount_released\": 1.1,\n    \"release_status\": \"held\"\n  },\n  \"state\": \"awaiting_payment\",\n  \"state_reason\": \"payment_expired\",\n  \"claimed_by\": \"buyer\",\n  \"cancellation_proposal\": {\n    \"proposed_by\": \"buyer\",\n    \"expires_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\",\n  \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "94322227-3336-4349-b04e-1a98bf697e19",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "6c480433-a0d9-4e18-b5c3-e93685731e86",
+      "name": "Accept a proposal to cancel (committed to cancelled, reason mutual) - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/accept_cancel",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"order\",\n  \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"buyer\": \"buyer\",\n  \"seller\": \"seller\",\n  \"quantity\": 1.1,\n  \"price\": {\n    \"unit_amount\": 1.1,\n    \"amount\": 1.1,\n    \"currency\": \"USD\"\n  },\n  \"fee\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"payments\": true,\n  \"payment\": {\n    \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n    \"status\": \"awaiting_payment\",\n    \"checkout_url\": \"checkout_url\",\n    \"client_secret\": \"client_secret\",\n    \"amount_refunded\": 1.1,\n    \"amount_released\": 1.1,\n    \"release_status\": \"held\"\n  },\n  \"state\": \"awaiting_payment\",\n  \"state_reason\": \"payment_expired\",\n  \"claimed_by\": \"buyer\",\n  \"cancellation_proposal\": {\n    \"proposed_by\": \"buyer\",\n    \"expires_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\",\n  \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "6c480433-a0d9-4e18-b5c3-e93685731e86",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "86d3292d-a37e-435e-910c-5892aa887e50",
+      "name": "Decline a proposal to cancel. The order stays committed. - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/decline_cancel",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"order\",\n  \"id\": \"ord_034XtPDs7UJ0TXzTsdaHZa\",\n  \"listing\": \"listing\",\n  \"buyer\": \"buyer\",\n  \"seller\": \"seller\",\n  \"quantity\": 1.1,\n  \"price\": {\n    \"unit_amount\": 1.1,\n    \"amount\": 1.1,\n    \"currency\": \"USD\"\n  },\n  \"fee\": {\n    \"amount\": 4900,\n    \"currency\": \"USD\"\n  },\n  \"payments\": true,\n  \"payment\": {\n    \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n    \"status\": \"awaiting_payment\",\n    \"checkout_url\": \"checkout_url\",\n    \"client_secret\": \"client_secret\",\n    \"amount_refunded\": 1.1,\n    \"amount_released\": 1.1,\n    \"release_status\": \"held\"\n  },\n  \"state\": \"awaiting_payment\",\n  \"state_reason\": \"payment_expired\",\n  \"claimed_by\": \"buyer\",\n  \"cancellation_proposal\": {\n    \"proposed_by\": \"buyer\",\n    \"expires_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"timer_expires_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\",\n  \"review_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"dispute_window_closes_at\": \"2024-01-15T09:30:00Z\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "86d3292d-a37e-435e-910c-5892aa887e50",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "4260d567-bdb0-4b5a-8139-07ea6176ba5a",
+      "name": "An order's reviews - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/reviews",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"review\",\n      \"id\": \"rev_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"author_role\": \"buyer\",\n      \"author\": \"author\",\n      \"subject\": \"subject\",\n      \"visible\": true,\n      \"rating\": 1.1,\n      \"body\": \"body\",\n      \"removed\": true,\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "4260d567-bdb0-4b5a-8139-07ea6176ba5a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "2acc9c7c-ce48-4608-966c-f2fc6c9edce4",
+      "name": "Review the other party - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/reviews",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"review\",\n  \"id\": \"rev_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"author_role\": \"buyer\",\n  \"author\": \"author\",\n  \"subject\": \"subject\",\n  \"visible\": true,\n  \"rating\": 1.1,\n  \"body\": \"body\",\n  \"removed\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "2acc9c7c-ce48-4608-966c-f2fc6c9edce4",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "87d8a44d-b633-4937-b0ad-645a3dbabecd",
+      "name": "Visible reviews about a buyer or a seller - default",
+      "request": {
+        "urlPathTemplate": "/v1/reviews",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "queryParameters": {
+          "subject": {
+            "equalTo": "subject"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"review\",\n      \"id\": \"rev_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"author_role\": \"buyer\",\n      \"author\": \"author\",\n      \"subject\": \"subject\",\n      \"visible\": true,\n      \"rating\": 1.1,\n      \"body\": \"body\",\n      \"removed\": true,\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "87d8a44d-b633-4937-b0ad-645a3dbabecd",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "ab9fe7c2-efb6-4cc6-aebe-e0c56a9efdbe",
+      "name": "Retrieve a review - default",
+      "request": {
+        "urlPathTemplate": "/v1/reviews/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"review\",\n  \"id\": \"rev_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"author_role\": \"buyer\",\n  \"author\": \"author\",\n  \"subject\": \"subject\",\n  \"visible\": true,\n  \"rating\": 1.1,\n  \"body\": \"body\",\n  \"removed\": true,\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ab9fe7c2-efb6-4cc6-aebe-e0c56a9efdbe",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "0be074dd-b21b-4e30-a741-66c0d31b30cd",
+      "name": "A buyer's or a seller's reputation events, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/reputation_events",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "queryParameters": {
+          "party": {
+            "equalTo": "party"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"reputation_event\",\n      \"id\": \"rep_034XtPDs7UJ0TXzTsdaHZa\",\n      \"party\": \"party\",\n      \"party_role\": \"buyer\",\n      \"kind\": \"order_completed\",\n      \"order\": \"order\",\n      \"review\": \"review\",\n      \"rating\": 1.1,\n      \"voids\": \"voids\",\n      \"reason\": \"reason\",\n      \"occurred_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0be074dd-b21b-4e30-a741-66c0d31b30cd",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "c55a6817-cdff-47d3-803d-bbc2d6540a17",
+      "name": "Void a reputation event, with a written reason - default",
+      "request": {
+        "urlPathTemplate": "/v1/reputation_events/{id}/void",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"reputation_event\",\n  \"id\": \"rep_034XtPDs7UJ0TXzTsdaHZa\",\n  \"party\": \"party\",\n  \"party_role\": \"buyer\",\n  \"kind\": \"order_completed\",\n  \"order\": \"order\",\n  \"review\": \"review\",\n  \"rating\": 1.1,\n  \"voids\": \"voids\",\n  \"reason\": \"reason\",\n  \"occurred_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "c55a6817-cdff-47d3-803d-bbc2d6540a17",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d6fb53db-d7d8-4db9-8ffa-6338be7da9f5",
+      "name": "List payments, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/payments",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"payment\",\n      \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"method\": \"checkout_session\",\n      \"status\": \"awaiting_payment\",\n      \"amount\": 1.1,\n      \"fee_amount\": 1.1,\n      \"currency\": \"USD\",\n      \"checkout_url\": \"checkout_url\",\n      \"client_secret\": \"client_secret\",\n      \"last_failure\": \"last_failure\",\n      \"amount_refunded\": 1.1,\n      \"release\": {\n        \"status\": null,\n        \"amount\": 1.1,\n        \"amount_reversed\": 1.1,\n        \"failure\": null,\n        \"released_at\": null\n      },\n      \"stripe\": {\n        \"payment_intent\": null,\n        \"checkout_session\": null,\n        \"charge\": null,\n        \"transfer\": null\n      },\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"paid_at\": \"2024-01-15T09:30:00Z\",\n      \"canceled_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d6fb53db-d7d8-4db9-8ffa-6338be7da9f5",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "0da1a3d0-fe11-486c-8fcf-7f0df26103ac",
+      "name": "Retrieve a payment - default",
+      "request": {
+        "urlPathTemplate": "/v1/payments/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"payment\",\n  \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"method\": \"checkout_session\",\n  \"status\": \"awaiting_payment\",\n  \"amount\": 1.1,\n  \"fee_amount\": 1.1,\n  \"currency\": \"USD\",\n  \"checkout_url\": \"checkout_url\",\n  \"client_secret\": \"client_secret\",\n  \"last_failure\": \"last_failure\",\n  \"amount_refunded\": 1.1,\n  \"release\": {\n    \"status\": \"held\",\n    \"amount\": 1.1,\n    \"amount_reversed\": 1.1,\n    \"failure\": \"failure\",\n    \"released_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"stripe\": {\n    \"payment_intent\": \"payment_intent\",\n    \"checkout_session\": \"checkout_session\",\n    \"charge\": \"charge\",\n    \"transfer\": \"transfer\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"paid_at\": \"2024-01-15T09:30:00Z\",\n  \"canceled_at\": \"2024-01-15T09:30:00Z\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0da1a3d0-fe11-486c-8fcf-7f0df26103ac",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3f476ecb-7d8f-4dac-8848-042631655ea8",
+      "name": "Replace a payment's metadata - default",
+      "request": {
+        "urlPathTemplate": "/v1/payments/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"payment\",\n  \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"method\": \"checkout_session\",\n  \"status\": \"awaiting_payment\",\n  \"amount\": 1.1,\n  \"fee_amount\": 1.1,\n  \"currency\": \"USD\",\n  \"checkout_url\": \"checkout_url\",\n  \"client_secret\": \"client_secret\",\n  \"last_failure\": \"last_failure\",\n  \"amount_refunded\": 1.1,\n  \"release\": {\n    \"status\": \"held\",\n    \"amount\": 1.1,\n    \"amount_reversed\": 1.1,\n    \"failure\": \"failure\",\n    \"released_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"stripe\": {\n    \"payment_intent\": \"payment_intent\",\n    \"checkout_session\": \"checkout_session\",\n    \"charge\": \"charge\",\n    \"transfer\": \"transfer\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"paid_at\": \"2024-01-15T09:30:00Z\",\n  \"canceled_at\": \"2024-01-15T09:30:00Z\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3f476ecb-7d8f-4dac-8848-042631655ea8",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "fce5ebf9-d562-4c42-ba1f-b181c2751510",
+      "name": "Try a failed release of the seller's share again - default",
+      "request": {
+        "urlPathTemplate": "/v1/payments/{id}/retry_release",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"payment\",\n  \"id\": \"pay_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"method\": \"checkout_session\",\n  \"status\": \"awaiting_payment\",\n  \"amount\": 1.1,\n  \"fee_amount\": 1.1,\n  \"currency\": \"USD\",\n  \"checkout_url\": \"checkout_url\",\n  \"client_secret\": \"client_secret\",\n  \"last_failure\": \"last_failure\",\n  \"amount_refunded\": 1.1,\n  \"release\": {\n    \"status\": \"held\",\n    \"amount\": 1.1,\n    \"amount_reversed\": 1.1,\n    \"failure\": \"failure\",\n    \"released_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"stripe\": {\n    \"payment_intent\": \"payment_intent\",\n    \"checkout_session\": \"checkout_session\",\n    \"charge\": \"charge\",\n    \"transfer\": \"transfer\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"paid_at\": \"2024-01-15T09:30:00Z\",\n  \"canceled_at\": \"2024-01-15T09:30:00Z\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "fce5ebf9-d562-4c42-ba1f-b181c2751510",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ac96989c-884a-4072-88a1-ac63a5aeeb5f",
+      "name": "List refunds, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/refunds",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"refund\",\n      \"id\": \"ref_034XtPDs7UJ0TXzTsdaHZa\",\n      \"payment\": \"payment\",\n      \"order\": \"order\",\n      \"amount\": 1.1,\n      \"currency\": \"USD\",\n      \"reason\": \"requested_by_customer\",\n      \"initiated_by\": \"api\",\n      \"status\": \"pending\",\n      \"failure_reason\": \"failure_reason\",\n      \"transfer_reversal\": {\n        \"amount\": 1.1\n      },\n      \"stripe\": {\n        \"refund\": null,\n        \"transfer_reversal\": null\n      },\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ac96989c-884a-4072-88a1-ac63a5aeeb5f",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "aa99d5a6-2e52-4852-858d-cbc117926af1",
+      "name": "Refund a payment, in full or in part - default",
+      "request": {
+        "urlPathTemplate": "/v1/refunds",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"refund\",\n  \"id\": \"ref_034XtPDs7UJ0TXzTsdaHZa\",\n  \"payment\": \"payment\",\n  \"order\": \"order\",\n  \"amount\": 1.1,\n  \"currency\": \"USD\",\n  \"reason\": \"requested_by_customer\",\n  \"initiated_by\": \"api\",\n  \"status\": \"pending\",\n  \"failure_reason\": \"failure_reason\",\n  \"transfer_reversal\": {\n    \"amount\": 1.1\n  },\n  \"stripe\": {\n    \"refund\": \"refund\",\n    \"transfer_reversal\": \"transfer_reversal\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "aa99d5a6-2e52-4852-858d-cbc117926af1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "a63f09d1-b69d-4777-ac9b-ebb094b59a87",
+      "name": "Retrieve a refund - default",
+      "request": {
+        "urlPathTemplate": "/v1/refunds/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"refund\",\n  \"id\": \"ref_034XtPDs7UJ0TXzTsdaHZa\",\n  \"payment\": \"payment\",\n  \"order\": \"order\",\n  \"amount\": 1.1,\n  \"currency\": \"USD\",\n  \"reason\": \"requested_by_customer\",\n  \"initiated_by\": \"api\",\n  \"status\": \"pending\",\n  \"failure_reason\": \"failure_reason\",\n  \"transfer_reversal\": {\n    \"amount\": 1.1\n  },\n  \"stripe\": {\n    \"refund\": \"refund\",\n    \"transfer_reversal\": \"transfer_reversal\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "a63f09d1-b69d-4777-ac9b-ebb094b59a87",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "56846429-ea2e-4835-b0c4-b6f68efa6b2a",
+      "name": "Replace a refund's metadata - default",
+      "request": {
+        "urlPathTemplate": "/v1/refunds/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"refund\",\n  \"id\": \"ref_034XtPDs7UJ0TXzTsdaHZa\",\n  \"payment\": \"payment\",\n  \"order\": \"order\",\n  \"amount\": 1.1,\n  \"currency\": \"USD\",\n  \"reason\": \"requested_by_customer\",\n  \"initiated_by\": \"api\",\n  \"status\": \"pending\",\n  \"failure_reason\": \"failure_reason\",\n  \"transfer_reversal\": {\n    \"amount\": 1.1\n  },\n  \"stripe\": {\n    \"refund\": \"refund\",\n    \"transfer_reversal\": \"transfer_reversal\"\n  },\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "56846429-ea2e-4835-b0c4-b6f68efa6b2a",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "08f9666a-a4af-4b0c-9447-f335b2777545",
+      "name": "Start a seller's identity verification - default",
+      "request": {
+        "urlPathTemplate": "/v1/sellers/{id}/verifications",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"verification\",\n  \"id\": \"ver_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"status\": \"requires_input\",\n  \"last_error_code\": \"last_error_code\",\n  \"url\": \"url\",\n  \"stripe_session\": \"stripe_session\",\n  \"verified_at\": \"2024-01-15T09:30:00Z\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "08f9666a-a4af-4b0c-9447-f335b2777545",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "615c7166-270f-493e-8e70-3cb10c441c58",
+      "name": "List identity verifications, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/verifications",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"verification\",\n      \"id\": \"ver_034XtPDs7UJ0TXzTsdaHZa\",\n      \"seller\": \"seller\",\n      \"status\": \"requires_input\",\n      \"last_error_code\": \"last_error_code\",\n      \"url\": \"url\",\n      \"stripe_session\": \"stripe_session\",\n      \"verified_at\": \"2024-01-15T09:30:00Z\",\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "615c7166-270f-493e-8e70-3cb10c441c58",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "731982c0-8267-4612-9be8-2b3d8cc35c27",
+      "name": "Retrieve an identity verification - default",
+      "request": {
+        "urlPathTemplate": "/v1/verifications/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"verification\",\n  \"id\": \"ver_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"status\": \"requires_input\",\n  \"last_error_code\": \"last_error_code\",\n  \"url\": \"url\",\n  \"stripe_session\": \"stripe_session\",\n  \"verified_at\": \"2024-01-15T09:30:00Z\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "731982c0-8267-4612-9be8-2b3d8cc35c27",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "77209224-97ae-46bd-8898-7ba789b1d7bd",
+      "name": "Cancel a verification the seller has not submitted - default",
+      "request": {
+        "urlPathTemplate": "/v1/verifications/{id}/cancel",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"verification\",\n  \"id\": \"ver_034XtPDs7UJ0TXzTsdaHZa\",\n  \"seller\": \"seller\",\n  \"status\": \"requires_input\",\n  \"last_error_code\": \"last_error_code\",\n  \"url\": \"url\",\n  \"stripe_session\": \"stripe_session\",\n  \"verified_at\": \"2024-01-15T09:30:00Z\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "77209224-97ae-46bd-8898-7ba789b1d7bd",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d10fa899-2e3b-4e75-94e5-dd50653980db",
+      "name": "List disputes, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/disputes",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"dispute\",\n      \"id\": \"dsp_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"kind\": \"claimed_order\",\n      \"opened_by\": \"buyer\",\n      \"opener\": \"opener\",\n      \"reason\": \"reason\",\n      \"stage\": \"evidence\",\n      \"evidence_due_at\": \"2024-01-15T09:30:00Z\",\n      \"decision_due_at\": \"2024-01-15T09:30:00Z\",\n      \"overdue\": true,\n      \"evidence_count\": 1.1,\n      \"decision\": {\n        \"against\": \"buyer\",\n        \"outcome\": \"claim_upheld\",\n        \"refund_amount\": null,\n        \"note\": \"note\",\n        \"decided_by\": null,\n        \"decided_at\": \"2024-01-15T09:30:00Z\"\n      },\n      \"card_disputes\": [\n        {\n          \"object\": \"card_dispute\",\n          \"id\": \"cdp_034XtPDs7UJ0TXzTsdaHZa\",\n          \"order\": \"order\",\n          \"stripe_dispute\": \"stripe_dispute\",\n          \"amount\": 1.1,\n          \"currency\": \"currency\",\n          \"reason\": \"reason\",\n          \"status\": \"status\",\n          \"created_at\": \"2024-01-15T09:30:00Z\"\n        }\n      ],\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"updated_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d10fa899-2e3b-4e75-94e5-dd50653980db",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "b3ad0264-ec2f-4af8-a8ed-6c3d5dd98ac3",
+      "name": "Retrieve a dispute - default",
+      "request": {
+        "urlPathTemplate": "/v1/disputes/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"dispute\",\n  \"id\": \"dsp_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"kind\": \"claimed_order\",\n  \"opened_by\": \"buyer\",\n  \"opener\": \"opener\",\n  \"reason\": \"reason\",\n  \"stage\": \"evidence\",\n  \"evidence_due_at\": \"2024-01-15T09:30:00Z\",\n  \"decision_due_at\": \"2024-01-15T09:30:00Z\",\n  \"overdue\": true,\n  \"evidence_count\": 1.1,\n  \"decision\": {\n    \"against\": \"buyer\",\n    \"outcome\": \"claim_upheld\",\n    \"refund_amount\": 1.1,\n    \"note\": \"note\",\n    \"decided_by\": \"decided_by\",\n    \"decided_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"card_disputes\": [\n    {\n      \"object\": \"card_dispute\",\n      \"id\": \"cdp_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"stripe_dispute\": \"stripe_dispute\",\n      \"amount\": 1.1,\n      \"currency\": \"currency\",\n      \"reason\": \"reason\",\n      \"status\": \"status\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "b3ad0264-ec2f-4af8-a8ed-6c3d5dd98ac3",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "6264df26-c83f-4ec5-acda-c42ac7a46d80",
+      "name": "A dispute's evidence, oldest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/disputes/{id}/evidence",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"dispute_evidence\",\n      \"id\": \"dev_034XtPDs7UJ0TXzTsdaHZa\",\n      \"dispute\": \"dispute\",\n      \"party\": \"buyer\",\n      \"author\": \"author\",\n      \"body\": \"body\",\n      \"links\": [\n        \"links\"\n      ],\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "6264df26-c83f-4ec5-acda-c42ac7a46d80",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "7ad01884-8730-4a6a-bdea-6ed010eb7112",
+      "name": "Add evidence from one side - default",
+      "request": {
+        "urlPathTemplate": "/v1/disputes/{id}/evidence",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"dispute_evidence\",\n  \"id\": \"dev_034XtPDs7UJ0TXzTsdaHZa\",\n  \"dispute\": \"dispute\",\n  \"party\": \"buyer\",\n  \"author\": \"author\",\n  \"body\": \"body\",\n  \"links\": [\n    \"links\"\n  ],\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "7ad01884-8730-4a6a-bdea-6ed010eb7112",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "e19f0abf-4668-4abc-b1b0-d1a5c6fab5c1",
+      "name": "End the evidence stage early - default",
+      "request": {
+        "urlPathTemplate": "/v1/disputes/{id}/close_evidence",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"dispute\",\n  \"id\": \"dsp_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"kind\": \"claimed_order\",\n  \"opened_by\": \"buyer\",\n  \"opener\": \"opener\",\n  \"reason\": \"reason\",\n  \"stage\": \"evidence\",\n  \"evidence_due_at\": \"2024-01-15T09:30:00Z\",\n  \"decision_due_at\": \"2024-01-15T09:30:00Z\",\n  \"overdue\": true,\n  \"evidence_count\": 1.1,\n  \"decision\": {\n    \"against\": \"buyer\",\n    \"outcome\": \"claim_upheld\",\n    \"refund_amount\": 1.1,\n    \"note\": \"note\",\n    \"decided_by\": \"decided_by\",\n    \"decided_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"card_disputes\": [\n    {\n      \"object\": \"card_dispute\",\n      \"id\": \"cdp_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"stripe_dispute\": \"stripe_dispute\",\n      \"amount\": 1.1,\n      \"currency\": \"currency\",\n      \"reason\": \"reason\",\n      \"status\": \"status\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e19f0abf-4668-4abc-b1b0-d1a5c6fab5c1",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ab8f6dd7-6802-4f48-bee4-59335be4b3b6",
+      "name": "Decide a dispute - default",
+      "request": {
+        "urlPathTemplate": "/v1/disputes/{id}/decide",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"dispute\",\n  \"id\": \"dsp_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"kind\": \"claimed_order\",\n  \"opened_by\": \"buyer\",\n  \"opener\": \"opener\",\n  \"reason\": \"reason\",\n  \"stage\": \"evidence\",\n  \"evidence_due_at\": \"2024-01-15T09:30:00Z\",\n  \"decision_due_at\": \"2024-01-15T09:30:00Z\",\n  \"overdue\": true,\n  \"evidence_count\": 1.1,\n  \"decision\": {\n    \"against\": \"buyer\",\n    \"outcome\": \"claim_upheld\",\n    \"refund_amount\": 1.1,\n    \"note\": \"note\",\n    \"decided_by\": \"decided_by\",\n    \"decided_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"card_disputes\": [\n    {\n      \"object\": \"card_dispute\",\n      \"id\": \"cdp_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"stripe_dispute\": \"stripe_dispute\",\n      \"amount\": 1.1,\n      \"currency\": \"currency\",\n      \"reason\": \"reason\",\n      \"status\": \"status\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ab8f6dd7-6802-4f48-bee4-59335be4b3b6",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "4609e3f2-bc3a-429a-8208-7999ebc1dcab",
+      "name": "Dispute an order - default",
+      "request": {
+        "urlPathTemplate": "/v1/orders/{id}/disputes",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"dispute\",\n  \"id\": \"dsp_034XtPDs7UJ0TXzTsdaHZa\",\n  \"order\": \"order\",\n  \"kind\": \"claimed_order\",\n  \"opened_by\": \"buyer\",\n  \"opener\": \"opener\",\n  \"reason\": \"reason\",\n  \"stage\": \"evidence\",\n  \"evidence_due_at\": \"2024-01-15T09:30:00Z\",\n  \"decision_due_at\": \"2024-01-15T09:30:00Z\",\n  \"overdue\": true,\n  \"evidence_count\": 1.1,\n  \"decision\": {\n    \"against\": \"buyer\",\n    \"outcome\": \"claim_upheld\",\n    \"refund_amount\": 1.1,\n    \"note\": \"note\",\n    \"decided_by\": \"decided_by\",\n    \"decided_at\": \"2024-01-15T09:30:00Z\"\n  },\n  \"card_disputes\": [\n    {\n      \"object\": \"card_dispute\",\n      \"id\": \"cdp_034XtPDs7UJ0TXzTsdaHZa\",\n      \"order\": \"order\",\n      \"stripe_dispute\": \"stripe_dispute\",\n      \"amount\": 1.1,\n      \"currency\": \"currency\",\n      \"reason\": \"reason\",\n      \"status\": \"status\",\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"updated_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "4609e3f2-bc3a-429a-8208-7999ebc1dcab",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "5eeef90e-4a11-40de-8b16-c258e3fd0f47",
+      "name": "List flags, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/flags",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"flag\",\n      \"id\": \"flg_034XtPDs7UJ0TXzTsdaHZa\",\n      \"target_type\": \"listing\",\n      \"target\": \"target\",\n      \"reporter\": \"reporter\",\n      \"reason\": \"prohibited_item\",\n      \"note\": \"note\",\n      \"status\": \"open\",\n      \"resolution\": \"dismissed\",\n      \"action\": \"action\",\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"resolved_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "5eeef90e-4a11-40de-8b16-c258e3fd0f47",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "89acc3c1-aade-42e5-89e0-b0839ccb8c44",
+      "name": "Flag a listing, a seller, or a review - default",
+      "request": {
+        "urlPathTemplate": "/v1/flags",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"flag\",\n  \"id\": \"flg_034XtPDs7UJ0TXzTsdaHZa\",\n  \"target_type\": \"listing\",\n  \"target\": \"target\",\n  \"reporter\": \"reporter\",\n  \"reason\": \"prohibited_item\",\n  \"note\": \"note\",\n  \"status\": \"open\",\n  \"resolution\": \"dismissed\",\n  \"action\": \"action\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"resolved_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "89acc3c1-aade-42e5-89e0-b0839ccb8c44",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ce96b7bd-c45f-4bde-b4be-e3287bb3bfe3",
+      "name": "Retrieve a flag - default",
+      "request": {
+        "urlPathTemplate": "/v1/flags/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"flag\",\n  \"id\": \"flg_034XtPDs7UJ0TXzTsdaHZa\",\n  \"target_type\": \"listing\",\n  \"target\": \"target\",\n  \"reporter\": \"reporter\",\n  \"reason\": \"prohibited_item\",\n  \"note\": \"note\",\n  \"status\": \"open\",\n  \"resolution\": \"dismissed\",\n  \"action\": \"action\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"resolved_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ce96b7bd-c45f-4bde-b4be-e3287bb3bfe3",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "988c2a5e-9c24-4798-b471-936546721301",
+      "name": "The review queue: everything with open flags, the longest waiting first - default",
+      "request": {
+        "urlPathTemplate": "/v1/moderation/queue",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"moderation_queue_item\",\n      \"target_type\": \"listing\",\n      \"target\": \"target\",\n      \"open_flags\": 1.1,\n      \"reasons\": {\n        \"key\": 1\n      },\n      \"first_flagged_at\": \"2024-01-15T09:30:00Z\",\n      \"last_flagged_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ]\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "988c2a5e-9c24-4798-b471-936546721301",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "229a3ef7-28b4-405d-bd87-d5dbca8da3b7",
+      "name": "The moderation log, newest first - default",
+      "request": {
+        "urlPathTemplate": "/v1/moderation/actions",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"moderation_action\",\n      \"id\": \"mod_034XtPDs7UJ0TXzTsdaHZa\",\n      \"target_type\": \"listing\",\n      \"target\": \"target\",\n      \"action\": \"dismiss\",\n      \"reason\": \"reason\",\n      \"actor\": \"actor\",\n      \"flags_resolved\": 1.1,\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "229a3ef7-28b4-405d-bd87-d5dbca8da3b7",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "e1301f76-b8b4-4668-955e-2648e8779644",
+      "name": "Act on a flagged target - default",
+      "request": {
+        "urlPathTemplate": "/v1/moderation/actions",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"moderation_action\",\n  \"id\": \"mod_034XtPDs7UJ0TXzTsdaHZa\",\n  \"target_type\": \"listing\",\n  \"target\": \"target\",\n  \"action\": \"dismiss\",\n  \"reason\": \"reason\",\n  \"actor\": \"actor\",\n  \"flags_resolved\": 1.1,\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "e1301f76-b8b4-4668-955e-2648e8779644",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "a7ee392d-7e9e-460c-be82-a3fb648a6c84",
+      "name": "List webhook endpoints - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_endpoints",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"webhook_endpoint\",\n      \"id\": \"whe_034XtPDs7UJ0TXzTsdaHZa\",\n      \"url\": \"url\",\n      \"description\": \"description\",\n      \"enabled_events\": [\n        \"enabled_events\"\n      ],\n      \"status\": \"enabled\",\n      \"disabled_reason\": \"disabled_reason\",\n      \"failing_since\": \"2024-01-15T09:30:00Z\",\n      \"last_success_at\": \"2024-01-15T09:30:00Z\",\n      \"secret\": \"secret\",\n      \"metadata\": {\n        \"key\": \"value\"\n      },\n      \"created_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "a7ee392d-7e9e-460c-be82-a3fb648a6c84",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "14ec4ed8-ce31-4636-8c8a-f881684cbc87",
+      "name": "Register a webhook endpoint - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_endpoints",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"webhook_endpoint\",\n  \"id\": \"whe_034XtPDs7UJ0TXzTsdaHZa\",\n  \"url\": \"url\",\n  \"description\": \"description\",\n  \"enabled_events\": [\n    \"enabled_events\"\n  ],\n  \"status\": \"enabled\",\n  \"disabled_reason\": \"disabled_reason\",\n  \"failing_since\": \"2024-01-15T09:30:00Z\",\n  \"last_success_at\": \"2024-01-15T09:30:00Z\",\n  \"secret\": \"secret\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "14ec4ed8-ce31-4636-8c8a-f881684cbc87",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "3475beec-661a-4d96-8b95-76468becf7c6",
+      "name": "Retrieve a webhook endpoint - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_endpoints/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"webhook_endpoint\",\n  \"id\": \"whe_034XtPDs7UJ0TXzTsdaHZa\",\n  \"url\": \"url\",\n  \"description\": \"description\",\n  \"enabled_events\": [\n    \"enabled_events\"\n  ],\n  \"status\": \"enabled\",\n  \"disabled_reason\": \"disabled_reason\",\n  \"failing_since\": \"2024-01-15T09:30:00Z\",\n  \"last_success_at\": \"2024-01-15T09:30:00Z\",\n  \"secret\": \"secret\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "3475beec-661a-4d96-8b95-76468becf7c6",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "0f8ff67f-9f12-4552-9e5a-3af84cb115e7",
+      "name": "Delete a webhook endpoint and its deliveries - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_endpoints/{id}",
+        "method": "DELETE",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"webhook_endpoint\",\n  \"id\": \"id\",\n  \"deleted\": true\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "0f8ff67f-9f12-4552-9e5a-3af84cb115e7",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "d5ab4706-46cf-4a0d-9348-7215c4268d38",
+      "name": "Update a webhook endpoint, or turn it off and on - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_endpoints/{id}",
+        "method": "PATCH",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"webhook_endpoint\",\n  \"id\": \"whe_034XtPDs7UJ0TXzTsdaHZa\",\n  \"url\": \"url\",\n  \"description\": \"description\",\n  \"enabled_events\": [\n    \"enabled_events\"\n  ],\n  \"status\": \"enabled\",\n  \"disabled_reason\": \"disabled_reason\",\n  \"failing_since\": \"2024-01-15T09:30:00Z\",\n  \"last_success_at\": \"2024-01-15T09:30:00Z\",\n  \"secret\": \"secret\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "d5ab4706-46cf-4a0d-9348-7215c4268d38",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ba8bdff2-4e9e-42ef-8d21-45fb09d4be63",
+      "name": "Replace the signing secret - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_endpoints/{id}/rotate_secret",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"webhook_endpoint\",\n  \"id\": \"whe_034XtPDs7UJ0TXzTsdaHZa\",\n  \"url\": \"url\",\n  \"description\": \"description\",\n  \"enabled_events\": [\n    \"enabled_events\"\n  ],\n  \"status\": \"enabled\",\n  \"disabled_reason\": \"disabled_reason\",\n  \"failing_since\": \"2024-01-15T09:30:00Z\",\n  \"last_success_at\": \"2024-01-15T09:30:00Z\",\n  \"secret\": \"secret\",\n  \"metadata\": {\n    \"key\": \"value\"\n  },\n  \"created_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ba8bdff2-4e9e-42ef-8d21-45fb09d4be63",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "ce74449b-15aa-4a83-b1dc-3fa22c6825f9",
+      "name": "Recent deliveries, newest first, with request and response - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_deliveries",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"webhook_delivery\",\n      \"id\": \"whd_034XtPDs7UJ0TXzTsdaHZa\",\n      \"endpoint\": \"endpoint\",\n      \"event\": \"event\",\n      \"event_type\": \"event_type\",\n      \"replay_of\": \"replay_of\",\n      \"status\": \"pending\",\n      \"attempts\": 1.1,\n      \"attempt_log\": [\n        {\n          \"at\": \"2024-01-15T09:30:00Z\",\n          \"status\": null,\n          \"duration_ms\": 1.1,\n          \"error\": null\n        }\n      ],\n      \"next_attempt_at\": \"2024-01-15T09:30:00Z\",\n      \"request\": {\n        \"headers\": {\n          \"key\": \"value\"\n        },\n        \"body\": \"body\"\n      },\n      \"response\": {\n        \"status\": null,\n        \"body\": null\n      },\n      \"error\": \"error\",\n      \"created_at\": \"2024-01-15T09:30:00Z\",\n      \"completed_at\": \"2024-01-15T09:30:00Z\"\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "ce74449b-15aa-4a83-b1dc-3fa22c6825f9",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "8e2d216d-b35c-48e5-aeeb-3ec6e524df4c",
+      "name": "Retrieve a delivery - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_deliveries/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"webhook_delivery\",\n  \"id\": \"whd_034XtPDs7UJ0TXzTsdaHZa\",\n  \"endpoint\": \"endpoint\",\n  \"event\": \"event\",\n  \"event_type\": \"event_type\",\n  \"replay_of\": \"replay_of\",\n  \"status\": \"pending\",\n  \"attempts\": 1.1,\n  \"attempt_log\": [\n    {\n      \"at\": \"2024-01-15T09:30:00Z\",\n      \"status\": 1.1,\n      \"duration_ms\": 1.1,\n      \"error\": \"error\"\n    }\n  ],\n  \"next_attempt_at\": \"2024-01-15T09:30:00Z\",\n  \"request\": {\n    \"headers\": {\n      \"key\": \"value\"\n    },\n    \"body\": \"body\"\n  },\n  \"response\": {\n    \"status\": 1.1,\n    \"body\": \"body\"\n  },\n  \"error\": \"error\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "8e2d216d-b35c-48e5-aeeb-3ec6e524df4c",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "173508c9-af94-4009-88a9-c375d79a0820",
+      "name": "Send a delivery again - default",
+      "request": {
+        "urlPathTemplate": "/v1/webhook_deliveries/{id}/replay",
+        "method": "POST",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": "{\n  \"object\": \"webhook_delivery\",\n  \"id\": \"whd_034XtPDs7UJ0TXzTsdaHZa\",\n  \"endpoint\": \"endpoint\",\n  \"event\": \"event\",\n  \"event_type\": \"event_type\",\n  \"replay_of\": \"replay_of\",\n  \"status\": \"pending\",\n  \"attempts\": 1.1,\n  \"attempt_log\": [\n    {\n      \"at\": \"2024-01-15T09:30:00Z\",\n      \"status\": 1.1,\n      \"duration_ms\": 1.1,\n      \"error\": \"error\"\n    }\n  ],\n  \"next_attempt_at\": \"2024-01-15T09:30:00Z\",\n  \"request\": {\n    \"headers\": {\n      \"key\": \"value\"\n    },\n    \"body\": \"body\"\n  },\n  \"response\": {\n    \"status\": 1.1,\n    \"body\": \"body\"\n  },\n  \"error\": \"error\",\n  \"created_at\": \"2024-01-15T09:30:00Z\",\n  \"completed_at\": \"2024-01-15T09:30:00Z\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "173508c9-af94-4009-88a9-c375d79a0820",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    },
+    {
+      "id": "9806c30a-9330-40cd-a294-97166664e721",
+      "name": "Events, newest first: every state change on every resource - default",
+      "request": {
+        "urlPathTemplate": "/v1/events",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"list\",\n  \"data\": [\n    {\n      \"object\": \"event\",\n      \"id\": \"evt_034XtPDs7UJ0TXzTsdaHZa\",\n      \"type\": \"seller.created\",\n      \"api_version\": \"api_version\",\n      \"created\": \"2024-01-15T09:30:00Z\",\n      \"livemode\": true,\n      \"data\": {\n        \"key\": \"value\"\n      }\n    }\n  ],\n  \"has_more\": true,\n  \"next_cursor\": \"next_cursor\"\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "9806c30a-9330-40cd-a294-97166664e721",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      },
+      "postServeActions": []
+    },
+    {
+      "id": "bd0743eb-3c9a-4b0f-8fcf-12890e937097",
+      "name": "Retrieve an event - default",
+      "request": {
+        "urlPathTemplate": "/v1/events/{id}",
+        "method": "GET",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .+"
+          }
+        },
+        "pathParameters": {
+          "id": {
+            "equalTo": "id"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": "{\n  \"object\": \"event\",\n  \"id\": \"evt_034XtPDs7UJ0TXzTsdaHZa\",\n  \"type\": \"seller.created\",\n  \"api_version\": \"api_version\",\n  \"created\": \"2024-01-15T09:30:00Z\",\n  \"livemode\": true,\n  \"data\": {\n    \"key\": \"value\"\n  }\n}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "uuid": "bd0743eb-3c9a-4b0f-8fcf-12890e937097",
+      "persistent": true,
+      "priority": 3,
+      "metadata": {
+        "mocklab": {
+          "created": {
+            "at": "2020-01-01T00:00:00.000Z",
+            "via": "SYSTEM"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "total": 85
+  }
+}
